@@ -1,0 +1,17 @@
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: tenantpress-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: tenantpress
+      POSTGRES_USER: tenantpress_user
+      POSTGRES_PASSWORD: local_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - tenantpress_data:/var/lib/postgresql/data
+
+volumes:
+  tenantpress_data:
