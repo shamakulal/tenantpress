@@ -1,0 +1,9 @@
+# Environment files
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Allow safe example templates
+!.env.example
+**/.env.example
